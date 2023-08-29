@@ -1582,7 +1582,7 @@ footer > a {
     position: fixed;
     right: 15px;
     bottom: 20px;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     transition: var(--mainTransition);
 }
 footer > a:hover {
