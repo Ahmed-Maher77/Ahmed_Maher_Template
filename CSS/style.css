@@ -238,6 +238,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
     background-color: var(--sectionBackground);
     width: 100%;
     height: 100vh;
+	min-height: 700px;
     transform: skewY(-5deg);
     top: -108px;
     z-index: -1
@@ -249,6 +250,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
     align-items: center;
     gap: 30px;
     height: calc(100vh - 89.16px);
+    min-height: calc(700px - 89.16px);
 }
 #landing .text {
     text-align: center;
