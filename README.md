@@ -4,4 +4,4 @@
 Ahmed Maher Template is a Web Template, I created it to show my skills
 
 ##### Used Technologies: HTML/HTML5 - CSS/CSS3 - Responsive Design - JavaScript - Git
-##### Demo: https://ahmed-maher77.github.io/Ahmed_Maher_Template/
+##### Demo (Live): https://ahmed-maher77.github.io/Ahmed_Maher_Template/
