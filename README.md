@@ -64,10 +64,10 @@ To run the project locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/creatix-agency-template.git
+git clone https://github.com/Ahmed-Maher77/Ahmed_Maher_Template.git
 
 # 2. Open the project folder
-cd creatix-agency-template
+cd Ahmed_Maher_Template
 
 # 3. Open index.html in your browser
 ```
