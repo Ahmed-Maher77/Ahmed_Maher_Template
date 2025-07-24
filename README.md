@@ -1,5 +1,3 @@
-![Ahmed Maher Template Mockup](https://github.com/Ahmed-Maher77/Ahmed_Maher_Template/assets/112467034/5b57bf7d-895d-4e41-98d4-4f179f51ab40)
-
 # Ahmed Maher's Template - Creative Agency Template:
 It is a modern and responsive website template designed for digital agencies, creative professionals, and freelancers. It includes all the essential sections such as services, portfolio, team, testimonials, pricing, blog, and more—combined with rich interactivity, stunning visuals, and smooth user experience to help convert visitors into clients.
 
@@ -29,6 +27,7 @@ It is a modern and responsive website template designed for digital agencies, cr
 - **Project Gallery** with captions and image lightbox  
 - **Features Highlights**: Quality, Passion, Delivery  
 - **Client Testimonials** carousel  
+
 - **Team Members** with profile cards  
 - **Services List**: Branding, Web/Mobile Dev, UI/UX, Marketing  
 - **Skills Progress Bars** to showcase expertise  
@@ -49,7 +48,7 @@ It is a modern and responsive website template designed for digital agencies, cr
 
 ## 👀 Website Preview  
 <a href="https://ahmed-maher77.github.io/Ahmed_Maher_Template/" title="demo">
-  <img src="uploaded-img-on-github-readme" alt="website preview" width="400">
+  <img src="https://github.com/user-attachments/assets/4f9f1898-5969-46bf-a54d-8fa6d9962ea1" alt="Ahmed_Maher_Template - UI Mockup" width="400">
 </a>
 
 ---
