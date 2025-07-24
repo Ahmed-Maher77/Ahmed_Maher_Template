@@ -53,6 +53,11 @@ It is a modern and responsive website template designed for digital agencies, cr
 
 ---
 
+<h3>Note:</h3>
+
+<p>The UI is inspired by <i>Graphberry templates</i>, but I’ve customized and adapted it to reflect my personal style, branding, and development approach.</p>
+---
+
 ## 📥 Installation Instructions
 
 To run the project locally:
