@@ -250,9 +250,9 @@ a[title="Go To Other Links"] i {
     font-size: 1rem;
     transform: translateY(-2.5px);
 }
-a[title="Go To Other Links"]:hover + .sub-links {
+/* a[title="Go To Other Links"]:hover + .sub-links {
     display: block;
-}
+} */
 /* End Sub Links */
 /* End Header */
 
@@ -348,6 +348,8 @@ a[title="Go To Other Links"]:hover + .sub-links {
     overflow: hidden;
     box-shadow: 0px 0px 5px 5px #e7e7e7b3;
     transition: var(--mainTransition);
+	position: relative;
+	padding-bottom: 60px;
 }
 #articles main figure:hover {
     transform: translateY(-10px);
@@ -376,6 +378,11 @@ a[title="Go To Other Links"]:hover + .sub-links {
     justify-content: space-between;
     align-items: center;
     transition: var(--mainTransition, 0.3s);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
 }
 #articles .button a {
     color: var(--mainColor);
@@ -398,6 +405,67 @@ a[title="Go To Other Links"]:hover + .sub-links {
         transform: translateX(0);
     }
 }
+.article-content-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 95%;
+	height: 100%;
+	background-color: #000000c4;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	div {
+		max-width: 500px;
+		height: auto;
+		max-height: 500px;
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+		border-radius: 10px;
+		overflow-y: auto;
+	}
+}
+.article-content-popup div {
+	opacity: 0;
+	transform: scale(0.95);
+	transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article-content-popup div.show {
+	opacity: 1;
+	transform: scale(1);
+}
+.article-content-popup img {
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+.article-content-popup h3 {
+	padding: 15px 20px;
+	font-size: 1.2rem;
+}
+.article-content-popup p {
+	padding: 15px 20px;
+	font-size: 1rem;
+}
+.close-article-content {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #fff;
+	border: none;
+	color: #000;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: var(--mainTransition, 0.3s);
+	&:hover {
+		background-color: #000000;
+		color: #fff;
+	}
+}
 /* End Articles Section */
 
 /* Start Gallery Section */
@@ -406,6 +474,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
     padding-bottom: var(--sectionPadding);
     background-color: var(--sectionBackground);
     position: relative;
+	overflow: hidden;
 }
 #gallery main {
     display: grid;
@@ -452,6 +521,12 @@ a[title="Go To Other Links"]:hover + .sub-links {
 #gallery figure:hover .info {
     width: calc(100% - 29px);
     height: calc(100% - 29px);
+	display: flex;
+	padding: 20px;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	text-align: center;
 }
 #gallery::after {
     content: '';
@@ -474,6 +549,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
     padding-top: var(--sectionPadding);
     padding-bottom: var(--sectionPadding);
     background-color: #fff;
+	overflow: hidden;
 }
 #features .container {
     display: grid;
@@ -663,6 +739,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
 #team {
     padding-top: var(--sectionPadding);
     padding-bottom: var(--sectionPadding);
+	overflow: hidden;
 }
 #team .container {
     display: grid;
@@ -747,6 +824,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
     padding-bottom: var(--sectionPadding);
     background-color: var(--sectionBackground);
     position: relative;
+	overflow: hidden;
 }
 #services::after {
     content: '';
@@ -872,28 +950,29 @@ a[title="Go To Other Links"]:hover + .sub-links {
     margin: 0 auto;
     row-gap: 30px;
 }
-#skills .item div {
+#skills .item .progress {
     height: 20px;
     background-color: #efeded;
     margin: 13px auto;
     position: relative;
 }
-#skills .item:not(:last-of-type) div {
+#skills .item:not(:last-of-type) .progress {
     margin-bottom: 25px
 }
-#skills .item > div span {
+#skills .item > .progress span {
     position: absolute;
     left: 0;
     height: 100%;
     background-color: var(--mainColor);
 }
-#skills .item h4 {
+#skills .item .skill-name {
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+	font-weight: bold;
 }
-#skills .item h4 span {
+#skills .item .skill-name > span {
     font-size: 1rem;
     display: inline-block;
     width: 40px;
@@ -903,6 +982,10 @@ a[title="Go To Other Links"]:hover + .sub-links {
     font-weight: bold;
     border: thin solid #ccc;
     color: var(--mainColor);
+}
+#skills .item .skill-name p > span {
+	font-size: 1.05rem;
+	font-weight: 500;
 }
 /* End Skills Section */
 
@@ -993,7 +1076,8 @@ a[title="Go To Other Links"]:hover + .sub-links {
 #events {
     padding-top: var(--sectionPadding);
     padding-bottom: var(--sectionPadding);
-    position: relative
+    position: relative;
+	overflow: hidden;
 }
 #events .container {
     display: flex;
@@ -1012,6 +1096,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
 #events .time {
     display: flex;
     justify-content: space-between;
+	gap: 10px;
     width: 280px;
     margin: 0 auto;
 }
@@ -1125,6 +1210,127 @@ a[title="Go To Other Links"]:hover + .sub-links {
     left: 20px;
     bottom: 50px;
 }
+/* Popup Backdrop */
+.success-message-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(30, 32, 38, 0.25);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(3px);
+	animation: fadeIn 0.3s;
+}
+
+/* Popup Box */
+.success-message {
+	background: rgba(255, 255, 255, 0.85);
+	padding: 2.8rem 2.2rem 2.2rem 2.2rem;
+	border-radius: 22px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18),
+		0 1.5px 8px 0 rgba(0, 0, 0, 0.08);
+	min-width: 340px;
+	max-width: 95vw;
+	text-align: left;
+	position: relative;
+	border: 1.5px solid rgba(200, 200, 200, 0.25);
+	font-family: "Segoe UI", "Cairo", Arial, sans-serif;
+	animation: popupIn 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transition: box-shadow 0.2s;
+}
+
+.success-message i.fa-check {
+	color: #2ecc71;
+	font-size: 3.2rem;
+	margin-bottom: 1.2rem;
+	display: block;
+	text-shadow: 0 2px 8px rgba(46, 204, 113, 0.08);
+}
+
+.success-message p,
+.success-message strong {
+	font-size: 1.15rem;
+	color: #222;
+	margin: 0.5rem 0;
+	letter-spacing: 0.01em;
+}
+
+.success-message ul {
+	margin: 0.7rem 0 0 0;
+	padding-left: 1.2em;
+	text-align: left;
+}
+
+.success-message li {
+	font-size: 1.05rem;
+	color: #444;
+	margin-bottom: 0.3em;
+	padding-left: 0.2em;
+	position: relative;
+}
+
+.success-message li::before {
+	content: "";
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	background: #2ecc71;
+	border-radius: 50%;
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+/* Close Button */
+.close-success-message {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	background: rgba(245, 245, 245, 0.85);
+	border: none;
+	border-radius: 50%;
+	width: 38px;
+	height: 38px;
+	font-size: 1.35rem;
+	color: #888;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.close-success-message:hover {
+	background: #e74c3c;
+	color: #fff;
+	box-shadow: 0 4px 16px rgba(231, 76, 60, 0.13);
+	transform: scale(1.08) rotate(8deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes popupIn {
+	0% {
+		transform: scale(0.7) translateY(60px);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1) translateY(0);
+		opacity: 1;
+	}
+}
 /* End Events Section */
 
 /* Start Pricing Section */
@@ -1133,6 +1339,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
     padding-bottom: var(--sectionPadding);
     position: relative;
     background-color: var(--sectionBackground);
+	overflow: hidden;
 }
 #pricing .dots {
     z-index: 2
@@ -1269,6 +1476,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
 #videos {
     padding-top: var(--sectionPadding);
     padding-bottom: var(--sectionPadding);
+	overflow: hidden;
 }
 #videos main {
     display: flex;
@@ -1277,7 +1485,24 @@ a[title="Go To Other Links"]:hover + .sub-links {
     flex-direction: column;
 }
 #videos aside {
-    flex-basis: 25%;
+	flex-basis: 25%;
+	max-height: 580px;
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	h5 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+		background-color: #efefef;
+		font-size: 1.1rem;
+		i {
+			font-size: 1.2rem;
+			color: var(--mainColor);
+		}
+	}
 }
 #videos .preview {
     flex-basis: 75%;
@@ -1300,9 +1525,11 @@ a[title="Go To Other Links"]:hover + .sub-links {
     transition: 0.5s;
     cursor: pointer
 }
-#videos ul li.active,
-#videos ul li:hover {
-    color: var(--mainColor)
+#videos ul li.active {
+	color: var(--mainColor);
+}
+#videos ul li:not(.active):hover {
+	background-color: #f0f0f0;
 }
 #videos ul li span {
     display: block;
@@ -1329,6 +1556,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
     url(../Images/stats.jpg) no-repeat;
     background-size: cover;
     text-align: center;
+	overflow: hidden;
 }
 .sub-heading {
     font-size: 1.8rem;
@@ -1390,6 +1618,7 @@ a[title="Go To Other Links"]:hover + .sub-links {
 #discount {
     display: flex;
     flex-direction: column;
+	overflow: hidden;
 }
 #discount > div {
     padding: 20px;
@@ -1444,6 +1673,39 @@ a[title="Go To Other Links"]:hover + .sub-links {
     margin: auto;
     caret-color: var(--mainColor)
 }
+#discount .right input:focus, #discount .right textarea:focus {
+	border-color: #6c88e3;   
+}
+#discount .invalid-input {    
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    color: rgb(203, 15, 15);
+    margin-block: 4px;
+    border-radius: 3px;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+#discount .input-field.activeError input, #discount .input-field.activeError textarea {    
+    border-color: rgb(203, 15, 15);
+}
+#discount .input-field.activeError .invalid-input, #discount .input-field.activeError .invalid-input {   
+    height: 100%;
+    padding: 5px 2px;
+}
+#discount .invalid-input span:first-of-type {    
+    display: block;
+    color: #fff;
+    background-color: rgb(203, 15, 15);
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
 #discount form input,
 #discount form textarea {
     display: block;
@@ -1466,10 +1728,16 @@ a[title="Go To Other Links"]:hover + .sub-links {
     font-weight: bold;
     cursor: pointer;
     transition: var(--mainTransition);
+	&[disabled="true"] {
+        background-color: #4a4a4a;
+	}
 }
 #discount form input[type="submit"]:hover {
     background-color: var(--thirdColor);
     transform: scaleX(0.95);
+	&[disabled="true"] {
+        background-color: #4a4a4a;
+    }
 }
 /* End Discount Section */
 
@@ -1477,7 +1745,8 @@ a[title="Go To Other Links"]:hover + .sub-links {
 footer {
     padding-top: var(--sectionPadding);
     background-color: #191919;
-    color: #fff
+    color: #fff;
+	overflow: hidden;
 }
 footer .container {
     display: flex;
@@ -1507,14 +1776,14 @@ footer .col-1 a {
     text-align: center;
     transition: var(--mainTransition);
 }
-footer .social a[title ~= "Facebook"]:hover {
-    background-color: rgb(0, 102, 255);
+footer .social a[title~="Facebook"]:hover {
+	background-color: rgb(0, 102, 255);
 }
-footer .social a[title ~= "Twitter"]:hover {
-    background-color: var(--mainColor);
+footer .social a[title~="Portfolio"]:hover {
+	background-color: var(--mainColor);
 }
-footer .social a[title ~= "Youtube"]:hover {
-    background-color: rgba(255, 0, 0, 0.836)
+footer .social a[title~="LinkedIn"]:hover {
+	background-color: #0077b5;
 }
 footer .col-1 a i {
     font-size: 1.2rem;
@@ -1656,9 +1925,9 @@ footer > a:hover {
     .sub-links .image {
         display: block;
     }
-    a[title="Go To Other Links"]:hover + .sub-links {
+    /* a[title="Go To Other Links"]:hover + .sub-links {
         display: flex;
-    }
+    } */
     .sub-links li a {
         padding: 17px 20px;
     }
