@@ -53,16 +53,21 @@ It is a modern and responsive website template designed for digital agencies, cr
 
 ---
 
+<h3>Note:</h3>
+
+<p>The UI is inspired by <i>Graphberry templates</i>, but I’ve customized and adapted it to reflect my personal style, branding, and development approach.</p>
+---
+
 ## 📥 Installation Instructions
 
 To run the project locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/creatix-agency-template.git
+git clone https://github.com/Ahmed-Maher77/Ahmed_Maher_Template.git
 
 # 2. Open the project folder
-cd creatix-agency-template
+cd Ahmed_Maher_Template
 
 # 3. Open index.html in your browser
 ```
