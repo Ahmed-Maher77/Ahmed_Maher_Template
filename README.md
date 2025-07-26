@@ -45,10 +45,11 @@ It is a modern and responsive website template designed for digital agencies, cr
 **📺 Watch on LinkedIn:** [coming soon]()
 
 ---
+<img width="4500" height="3003" alt="UI Mockup" src="" />
 
 ## 👀 Website Preview  
 <a href="https://ahmed-maher77.github.io/Ahmed_Maher_Template/" title="demo">
-  <img src="https://github.com/user-attachments/assets/4f9f1898-5969-46bf-a54d-8fa6d9962ea1" alt="Ahmed_Maher_Template - UI Mockup" width="400">
+  <img src="https://github.com/user-attachments/assets/db311fc2-2762-4d22-9997-b68ce585d6fa" alt="Ahmed_Maher_Template - UI Mockup" width="400">
 </a>
 
 ---
